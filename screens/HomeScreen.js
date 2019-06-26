@@ -13,12 +13,26 @@ import { WebBrowser } from 'expo'
 import { MonoText } from '../components/StyledText'
 
 export default class HomeScreen extends React.Component {
+  constructor() {
+    super()
+
+    this.openPopup = this.openPopup.bind(this)
+  }
+
+  state = {
+    message: 'this is a message'
+  }
+
   static navigationOptions = {
     header: null
   };
 
   openPopup() {
-    console.log('hello')
+    this.setState({message: 'very good morning'}, () => console.log(this.state.message))
+  }
+
+  componentDidMount() {
+    console.log('morning')
   }
 
   render() {
