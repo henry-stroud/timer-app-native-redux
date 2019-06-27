@@ -9,6 +9,11 @@ class Timer extends React.Component {
         <View style={styles.upper}>
           <Text style={styles.time}> 25:00 </Text>
         </View>
+        <View style={styles.lower}>
+          <Text style={{ color: '#ffffff', fontSize: 32}}>
+            Start and Stop Buttons!
+          </Text>
+        </View>
       </View>
     )
   }
@@ -17,9 +22,22 @@ class Timer extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000'
+  },
+  upper: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  lower: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  time: {
+    color: '#ffffff',
+    fontSize: 120,
+    fontWeight: '100'
   }
 })
 
