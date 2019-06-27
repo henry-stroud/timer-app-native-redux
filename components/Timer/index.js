@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, StatusBar } from 'react-native'
 
 class Timer extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Timer Component</Text>
+        <StatusBar barStyle={'light-content'} />
+        <View style={styles.upper}>
+          <Text style={styles.time}> 25:00 </Text>
+        </View>
       </View>
     )
   }
