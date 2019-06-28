@@ -4,9 +4,12 @@ import PropTypes from 'prop-types'
 import { FontAwesome } from '@expo/vector-icons'
 
 const Button = ({ iconName, onPress }) => {
-  <TouchableOpacity onPressOut={onPress}>
-    <FontAwesome name={iconName} size={80} color='#ffffff'/>
-  </TouchableOpacity>
+  return (
+    <TouchableOpacity onPressOut={onPress}>
+      <FontAwesome name={iconName} size={80} color='#ffffff'/>
+    </TouchableOpacity>
+
+  )
 }
 
 Button.propTypes = {

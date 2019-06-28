@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Alert } from 'react-native'
-import Button from '../button'
-
+import Cross from './button'
 
 class Timer extends React.Component {
   render() {
@@ -12,12 +11,12 @@ class Timer extends React.Component {
           <Text style={styles.time}> 25:00 </Text>
         </View>
         <View style={styles.lower}>
-          <Button
-            iconName='play-circle'
+          <Cross
+            iconName="play-circle"
             onPress={() => Alert.alert('Start Timer!')}
           />
-          <Button
-            iconName='stop-circle'
+          <Cross
+            iconName="stop-circle"
             onPress={() => Alert.alert('Stop Timer!')}
           />
         </View>
@@ -25,6 +24,8 @@ class Timer extends React.Component {
     )
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
