@@ -1,6 +1,6 @@
 import { START_TIMER, RESTART_TIMER, ADD_SECOND } from './types'
 
-const TIMER_DURATION = 6
+const TIMER_DURATION = 10
 
 //initial state
 const initialState = {
