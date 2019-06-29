@@ -1,6 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, StatusBar, Alert } from 'react-native'
-import Cross from './button'
+import Button from './button'
+
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actionCreators as actions } from './actions'
+
 
 class Timer extends React.Component {
   render() {
@@ -11,11 +16,11 @@ class Timer extends React.Component {
           <Text style={styles.time}> 25:00 </Text>
         </View>
         <View style={styles.lower}>
-          <Cross
+          <Button
             iconName="play-circle"
             onPress={() => Alert.alert('Start Timer!')}
           />
-          <Cross
+          <Button
             iconName="stop-circle"
             onPress={() => Alert.alert('Stop Timer!')}
           />
